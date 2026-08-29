@@ -4,6 +4,107 @@
 <head>
    <meta charset="UTF-8">
    <title>Traffic Rider 2.0</title>
+
+   <style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    font-family: Arial, sans-serif;
+}
+
+#game {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+
+    background: skyblue;
+}
+
+/* Estrada */
+
+#road {
+    position: absolute;
+
+    left: 10%;
+    right: 10%;
+    bottom: 0;
+
+    height: 70%;
+
+    background: #333;
+}
+
+/* Moto */
+
+#player {
+    position: absolute;
+
+    bottom: 90px;
+    left: 50%;
+
+    width: 60px;
+    height: 90px;
+
+    transform: translateX(-50%);
+
+    background: red;
+    border-radius: 15px;
+}
+
+/* Distância */
+
+#score {
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    text-shadow: 2px 2px 3px black;
+}
+
+/* Botões */
+
+button {
+    position: absolute;
+
+    bottom: 20px;
+
+    width: 80px;
+    height: 70px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    color: white;
+
+    font-size: 30px;
+}
+
+#left {
+    left: 20px;
+}
+
+#right {
+    right: 20px;
+}
+
+</style>
+
 </head>
 
 <body>
