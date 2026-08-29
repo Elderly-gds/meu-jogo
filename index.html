@@ -2,128 +2,101 @@
 <html lang="pt-BR">
 
 <head>
-   <meta charset="UTF-8">
-   <title>Traffic Rider 2.0</title>
+    <meta charset="UTF-8">
+    <title>Traffic Rider 2.0</title>
 
-   <style>
+    <style>
 
-* {
-    box-sizing: border-box;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-body {
-    margin: 0;
-    overflow: hidden;
-    background: black;
-    font-family: Arial, sans-serif;
-}
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+            font-family: Arial, sans-serif;
+        }
 
-#game {
-    width: 100vw;
-    height: 100vh;
+        #game {
+            width: 100vw;
+            height: 100vh;
 
-    position: relative;
-    overflow: hidden;
+            position: relative;
+            overflow: hidden;
 
-    background: skyblue;
-}
+            background: skyblue;
+        }
 
-/* Estrada */
+        #road {
+            position: absolute;
 
-#road {
-    position: absolute;
+            left: 10%;
+            right: 10%;
+            bottom: 0;
 
-    left: 10%;
-    right: 10%;
-    bottom: 0;
+            height: 70%;
 
-    height: 70%;
+            background: #333;
+        }
 
-    background: #333;
-}
+        #player {
+            position: absolute;
 
-/* Moto */
+            bottom: 90px;
+            left: 50%;
 
-#player {
-    position: absolute;
+            width: 60px;
+            height: 90px;
 
-    bottom: 90px;
-    left: 50%;
+            transform: translateX(-50%);
 
-    width: 60px;
-    height: 90px;
+            background: red;
+            border-radius: 15px;
+        }
 
-    transform: translateX(-50%);
+        #score {
+            position: absolute;
 
-    background: red;
-    border-radius: 15px;
-}
+            top: 20px;
+            left: 20px;
 
-/* Distância */
+            color: white;
 
-#score {
-    position: absolute;
+            font-size: 20px;
+            font-weight: bold;
 
-    top: 20px;
-    left: 20px;
+            text-shadow: 2px 2px 3px black;
+        }
 
-    color: white;
+        button {
+            position: absolute;
 
-    font-size: 20px;
-    font-weight: bold;
+            bottom: 70px;
 
-    text-shadow: 2px 2px 3px black;
-}
+            width: 100px;
+            height: 85px;
 
-/* Botões */
+            border: none;
+            border-radius: 20px;
 
-button {
-    position: absolute;
+            background: rgba(0, 0, 0, 0.6);
 
-    bottom: 20px;
+            color: white;
 
-    width: 80px;
-    height: 70px;
+            font-size: 38px;
+        }
 
-    border: none;
-    border-radius: 15px;
+        #left {
+            left: 15%;
+        }
 
-    background: rgba(0, 0, 0, 0.6);
+        #right {
+            right: 15%;
+        }
 
-    color: white;
-
-    font-size: 30px;
-}
-
-#left {
-    left: 20px;
-}
-
-#right {
-    right: 20px;
-}
-
-</style>
+    </style>
 
 </head>
 
 <body>
-
-<div id="game">
-
-    <div id="road"></div>
-
-    <div id="player"></div>
-
-    <div id="score">
-        Distância: 0 m
-    </div>
-
-    <button id="left">⬅️</button>
-    <button id="right">➡️</button>
-
-</div>
-
-</body>
-
-</html>
